@@ -79,7 +79,8 @@ model.fit(X)
 preds = model.predict(X)   # -1 = anomaly, 1 = normal
 df["anomaly_model"] = (preds == -1)
 
-# Save to CSV for loading to SQL / Power BI
+# Save to CSV for loading to SQL 
 df.to_csv("network_telemetry_simulated.csv", index=False)
 print("Saved network_telemetry_simulated.csv with", len(df), "rows")
 print(df.head())
+
